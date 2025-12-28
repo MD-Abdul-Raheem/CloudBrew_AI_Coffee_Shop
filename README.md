@@ -1,12 +1,118 @@
-# ☁️ CloudBrew AI Coffee Shop
+# ☕ CloudBrew – Serverless Coffee Ordering Platform (AWS)
 
-A modern, AI-powered coffee shop landing page with an interactive multi-step ordering system. Built with vanilla HTML, CSS, and JavaScript, integrated with AWS serverless backend.
+CloudBrew is a fully serverless web application built on AWS that allows users to place and retrieve coffee orders through a static frontend integrated with cloud-native backend services.  
+The project demonstrates real-world frontend–backend interaction, serverless architecture design, and AWS service integration without managing any servers.
 
 ![CloudBrew](https://img.shields.io/badge/CloudBrew-AI%20Coffee-8B4513?style=for-the-badge)
 ![AWS](https://img.shields.io/badge/AWS-Serverless-FF9900?style=for-the-badge&logo=amazon-aws)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+---
+
+## 🚀 Live Architecture Overview
+
+```
+User Browser  
+→ Static Website (Amazon S3)  
+→ API Gateway (HTTP API)  
+→ AWS Lambda (Business Logic)  
+→ DynamoDB (Persistent Storage)  
+→ CloudWatch (Monitoring & Logs)
+```
+
+---
+
+## 🧱 AWS Services Used (Implemented)
+
+- **Amazon S3**
+  - Hosts the static frontend website (HTML, CSS, JavaScript)
+  - Public read-only access for assets
+
+- **Amazon API Gateway (HTTP API)**
+  - Exposes REST endpoints:
+    - `POST /order` – Place a new coffee order
+    - `GET /order/{orderId}` – Fetch order details
+  - Handles CORS configuration for browser-based requests
+
+- **AWS Lambda**
+  - `cloudbrew-create-order`: Processes incoming orders and stores them in DynamoDB
+  - `cloudbrew-get-order`: Retrieves order details using orderId
+  - Stateless, event-driven compute
+
+- **Amazon DynamoDB**
+  - Stores order records with attributes like:
+    - orderId
+    - item
+    - quantity
+    - status
+    - createdAt
+  - Low-latency, fully managed NoSQL database
+
+- **Amazon CloudWatch**
+  - Centralized logging for Lambda executions
+  - Used for debugging, monitoring, and validation
+
+- **AWS IAM**
+  - Fine-grained permissions between Lambda, DynamoDB, and API Gateway
+
+- **AWS Budgets**
+  - Cost monitoring and alerts to stay within AWS Free Tier
+
+---
+
+## 🔄 Application Workflow
+
+1. User opens the CloudBrew website hosted on Amazon S3
+2. User selects coffee options and confirms the order
+3. Frontend sends a `POST` request to API Gateway
+4. API Gateway invokes the Lambda function
+5. Lambda validates input and stores the order in DynamoDB
+6. DynamoDB returns confirmation
+7. Lambda responds with a unique `orderId`
+8. User can retrieve order details via `GET /order/{orderId}`
+
+---
+
+## 📦 API Contract
+
+### Place Order
+**POST** `/order`
+
+```json
+{
+  "name": "Abdul",
+  "coffeeType": "Latte",
+  "quantity": 1
+}
+```
+
+**Response:**
+```json
+{
+  "orderId": "abc123",
+  "status": "confirmed",
+  "message": "Order placed successfully"
+}
+```
+
+### Get Order
+**GET** `/order/{orderId}`
+
+**Response:**
+```json
+{
+  "orderId": "abc123",
+  "name": "Abdul",
+  "coffeeType": "Latte",
+  "quantity": 1,
+  "status": "confirmed",
+  "createdAt": "2024-01-15T10:30:00Z"
+}
+```
+
+---
 
 ## 🚀 Features
 
@@ -114,7 +220,7 @@ The order system connects to AWS API Gateway:
 
 **Endpoint:** `https://nh9mq2pqr2.execute-api.ap-south-1.amazonaws.com/order`
 
-**Request Format:**
+**Full Request Format:**
 ```json
 {
   "name": "Customer Name",
