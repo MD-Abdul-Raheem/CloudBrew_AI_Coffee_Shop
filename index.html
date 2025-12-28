@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudBrew AI Coffee Shop - Premium AI-powered coffee experiences. Personalized, cloud-crafted, perfected by machine learning.">
+  <title>CloudBrew AI Coffee Shop | Premium AI-Powered Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">☁️</span>
+        <span class="logo-text">CloudBrew</span>
+      </a>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#ai-barista" class="nav-link">AI Barista</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Order Now</a></li>
+      </ul>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title animate-fade-in">
+          Crafted in the Cloud.<br>
+          <span class="gradient-text">Perfected by AI.</span>
+        </h1>
+        <p class="hero-subtitle animate-fade-in-delay">
+          Experience the future of coffee. Where machine learning meets artisan craftsmanship to create your perfect cup.
+        </p>
+        <div class="hero-cta animate-fade-in-delay-2">
+          <button class="btn btn-primary">Explore Menu</button>
+          <button class="btn btn-secondary">Try AI Barista</button>
+        </div>
+      </div>
+      <div class="hero-visual animate-slide-in">
+        <div class="coffee-cup">
+          <div class="steam"></div>
+          <div class="steam"></div>
+          <div class="steam"></div>
+          ☕
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title reveal">AI-Powered Coffee Experience</h2>
+      <p class="section-subtitle reveal">Intelligent brewing meets premium taste</p>
+      
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧠</div>
+          <h3>AI Taste Predictor</h3>
+          <p>Machine learning algorithms analyze your preferences to recommend the perfect brew every time.</p>
+        </div>
+        
+        <div class="feature-card reveal">
+          <div class="feature-icon">☁️</div>
+          <h3>Cloud Brew Engine</h3>
+          <p>Real-time optimization powered by AWS ensures consistent quality across all locations.</p>
+        </div>
+        
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔥</div>
+          <h3>Smart Roast Algorithm</h3>
+          <p>Precision roasting controlled by AI for optimal flavor extraction and aroma balance.</p>
+        </div>
+        
+        <div class="feature-card reveal">
+          <div class="feature-icon">💭</div>
+          <h3>Mood-Based Drinks</h3>
+          <p>Tell us how you feel, and our AI crafts a personalized drink to match your mood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <h2 class="section-title reveal">Premium Menu</h2>
+      <p class="section-subtitle reveal">AI-crafted, cloud-perfected</p>
+      
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/cappuccino.webp.webp" alt="Cloud Cappuccino">
+            <div class="menu-badge">Popular</div>
+          </div>
+          <div class="menu-content">
+            <h3>Cloud Cappuccino</h3>
+            <p>Velvety foam with AI-optimized milk temperature. Light, airy, perfect.</p>
+            <div class="menu-footer">
+              <span class="price">$5.99</span>
+              <button class="btn-order" data-drink-category="coffee">Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/espresso.webp.webp" alt="Neural Espresso">
+            <div class="menu-badge">AI Special</div>
+          </div>
+          <div class="menu-content">
+            <h3>Neural Espresso</h3>
+            <p>Precision-extracted shot with machine-learned pressure curves for bold flavor.</p>
+            <div class="menu-footer">
+              <span class="price">$4.49</span>
+              <button class="btn-order" data-drink-category="coffee">Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/latte.webp.webp" alt="Quantum Latte">
+          </div>
+          <div class="menu-content">
+            <h3>Quantum Latte</h3>
+            <p>Smooth, balanced blend with AI-predicted flavor notes tailored to you.</p>
+            <div class="menu-footer">
+              <span class="price">$6.49</span>
+              <button class="btn-order" data-drink-category="latte">Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/Mocha.webp.webp" alt="Cloud Mocha">
+          </div>
+          <div class="menu-content">
+            <h3>Cloud Mocha</h3>
+            <p>Rich chocolate meets espresso in a cloud of perfection.</p>
+            <div class="menu-footer">
+              <span class="price">$6.99</span>
+              <button class="btn-order" data-drink-category="coffee">Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/Iced.webp.webp" alt="Iced AI Brew">
+          </div>
+          <div class="menu-content">
+            <h3>Iced AI Brew</h3>
+            <p>Cold-brewed with algorithmic precision for smooth, refreshing taste.</p>
+            <div class="menu-footer">
+              <span class="price">$5.49</span>
+              <button class="btn-order" data-drink-category="cold-brew">Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal">
+          <div class="menu-image">
+            <img src="assets/Matcha.webp.webp" alt="Matcha Cloud">
+          </div>
+          <div class="menu-content">
+            <h3>Matcha Cloud</h3>
+            <p>Premium matcha with AI-balanced sweetness and cloud-like texture.</p>
+            <div class="menu-footer">
+              <span class="price">$6.99</span>
+              <button class="btn-order" data-drink-category="tea">Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Barista Section -->
+  <section class="ai-barista" id="ai-barista">
+    <div class="container">
+      <div class="ai-content reveal">
+        <h2 class="section-title">Your Personal AI Barista</h2>
+        <p class="section-subtitle">Tell us your mood, get your perfect drink</p>
+        
+        <div class="ai-chat">
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+              <div class="message-avatar">🤖</div>
+              <div class="message-content">
+                <p>Hi! I'm your AI Barista. How are you feeling today?</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chat-input-container">
+            <input 
+              type="text" 
+              class="chat-input" 
+              id="moodInput" 
+              placeholder="Type your mood (e.g., tired, energetic, relaxed)..."
+            >
+            <button class="btn-send" id="sendBtn">
+              <span>→</span>
+            </button>
+          </div>
+          
+          <div class="mood-suggestions">
+            <button class="mood-chip" data-mood="tired">😴 Tired</button>
+            <button class="mood-chip" data-mood="energetic">⚡ Energetic</button>
+            <button class="mood-chip" data-mood="relaxed">😌 Relaxed</button>
+            <button class="mood-chip" data-mood="focused">🎯 Focused</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content reveal">
+        <h2 class="section-title">Where Cloud Meets Coffee</h2>
+        <div class="about-text">
+          <p class="lead">
+            CloudBrew was born from a simple question: What if artificial intelligence could perfect the art of coffee?
+          </p>
+          <p>
+            Founded in 2024, we combine traditional coffee craftsmanship with cutting-edge machine learning. Our AI analyzes thousands of flavor profiles, brewing parameters, and customer preferences to create the perfect cup every time.
+          </p>
+          <p>
+            Powered by AWS cloud infrastructure, our smart brewing systems ensure consistency across all locations while adapting to individual tastes. From bean selection to the final pour, every step is optimized by intelligent algorithms.
+          </p>
+          <p>
+            <strong>The result?</strong> A coffee experience that's both deeply personal and impossibly consistent. Welcome to the future of coffee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Order System Modal -->
+  <div class="order-overlay" id="orderOverlay" style="display: none;">
+    <div class="order-container">
+      <!-- Header -->
+      <header class="order-header">
+        <div class="logo">
+          <span class="logo-icon">☁️</span>
+          <span class="logo-text">CloudBrew</span>
+        </div>
+        <h1>AI-Powered Order Builder</h1>
+        <button class="close-order" id="closeOrder">✕</button>
+      </header>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-steps">
+          <div class="step active" data-step="1">
+            <div class="step-circle">1</div>
+            <span>Category</span>
+          </div>
+          <div class="step" data-step="2">
+            <div class="step-circle">2</div>
+            <span>Customize</span>
+          </div>
+          <div class="step" data-step="3">
+            <div class="step-circle">3</div>
+            <span>AI Mood</span>
+          </div>
+          <div class="step" data-step="4">
+            <div class="step-circle">4</div>
+            <span>Info</span>
+          </div>
+          <div class="step" data-step="5">
+            <div class="step-circle">5</div>
+            <span>Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1: Choose Category -->
+      <div class="step-content active" id="step1">
+        <h2 class="step-title">Choose Your Drink Category</h2>
+        <p class="step-subtitle">Select from our AI-curated collection</p>
+        
+        <div class="category-grid">
+          <div class="category-card" data-category="coffee">
+            <div class="category-icon">☕</div>
+            <h3>Coffee</h3>
+            <p>Classic espresso-based drinks</p>
+          </div>
+          
+          <div class="category-card" data-category="cold-brew">
+            <div class="category-icon">🧊</div>
+            <h3>Cold Brew</h3>
+            <p>Smooth, refreshing cold coffee</p>
+          </div>
+          
+          <div class="category-card" data-category="latte">
+            <div class="category-icon">🥛</div>
+            <h3>Latte</h3>
+            <p>Creamy milk-based perfection</p>
+          </div>
+          
+          <div class="category-card" data-category="tea">
+            <div class="category-icon">🍵</div>
+            <h3>Tea</h3>
+            <p>Premium tea selections</p>
+          </div>
+          
+          <div class="category-card featured" data-category="ai-signature">
+            <div class="category-icon">🤖</div>
+            <h3>AI Signature</h3>
+            <p>Machine-crafted exclusives</p>
+            <span class="badge">AI Special</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Customize -->
+      <div class="step-content" id="step2">
+        <h2 class="step-title">Customize Your Drink</h2>
+        <p class="step-subtitle">Tailor it to perfection</p>
+        
+        <div class="customize-grid">
+          <!-- Size -->
+          <div class="option-group">
+            <label class="option-label">Size</label>
+            <div class="option-buttons">
+              <button class="option-btn" data-option="size" data-value="small">
+                <span class="option-icon">S</span>
+                <span>Small</span>
+                <span class="option-price">+$0</span>
+              </button>
+              <button class="option-btn active" data-option="size" data-value="medium">
+                <span class="option-icon">M</span>
+                <span>Medium</span>
+                <span class="option-price">+$1</span>
+              </button>
+              <button class="option-btn" data-option="size" data-value="large">
+                <span class="option-icon">L</span>
+                <span>Large</span>
+                <span class="option-price">+$2</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Milk Type -->
+          <div class="option-group">
+            <label class="option-label">Milk Type</label>
+            <div class="option-buttons">
+              <button class="option-btn active" data-option="milk" data-value="whole">Whole</button>
+              <button class="option-btn" data-option="milk" data-value="oat">Oat</button>
+              <button class="option-btn" data-option="milk" data-value="almond">Almond</button>
+              <button class="option-btn" data-option="milk" data-value="soy">Soy</button>
+            </div>
+          </div>
+
+          <!-- Sweetness -->
+          <div class="option-group">
+            <label class="option-label">Sweetness Level</label>
+            <div class="slider-container">
+              <input type="range" class="slider" id="sweetness" min="0" max="100" value="50">
+              <div class="slider-labels">
+                <span>None</span>
+                <span id="sweetnessValue">50%</span>
+                <span>Extra</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ice Level -->
+          <div class="option-group">
+            <label class="option-label">Ice Level</label>
+            <div class="slider-container">
+              <input type="range" class="slider" id="ice" min="0" max="100" value="50">
+              <div class="slider-labels">
+                <span>No Ice</span>
+                <span id="iceValue">50%</span>
+                <span>Extra</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Espresso Shots -->
+          <div class="option-group">
+            <label class="option-label">Espresso Shots</label>
+            <div class="counter">
+              <button class="counter-btn" id="decreaseShots">-</button>
+              <span class="counter-value" id="shotsValue">2</span>
+              <button class="counter-btn" id="increaseShots">+</button>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="option-group full-width">
+            <label class="option-label">Add-ons</label>
+            <div class="addon-grid">
+              <label class="addon-checkbox">
+                <input type="checkbox" data-addon="vanilla" data-price="0.50">
+                <span class="addon-label">
+                  <span>Vanilla</span>
+                  <span class="addon-price">+$0.50</span>
+                </span>
+              </label>
+              <label class="addon-checkbox">
+                <input type="checkbox" data-addon="caramel" data-price="0.50">
+                <span class="addon-label">
+                  <span>Caramel</span>
+                  <span class="addon-price">+$0.50</span>
+                </span>
+              </label>
+              <label class="addon-checkbox">
+                <input type="checkbox" data-addon="mocha" data-price="0.75">
+                <span class="addon-label">
+                  <span>Mocha</span>
+                  <span class="addon-price">+$0.75</span>
+                </span>
+              </label>
+              <label class="addon-checkbox">
+                <input type="checkbox" data-addon="whipped-cream" data-price="0.50">
+                <span class="addon-label">
+                  <span>Whipped Cream</span>
+                  <span class="addon-price">+$0.50</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: AI Mood -->
+      <div class="step-content" id="step3">
+        <h2 class="step-title">AI Personalization</h2>
+        <p class="step-subtitle">Let our AI optimize your drink based on your mood</p>
+        
+        <div class="mood-grid">
+          <div class="mood-card" data-mood="energetic">
+            <div class="mood-icon">⚡</div>
+            <h3>Energetic</h3>
+            <p>Boost your energy and focus</p>
+          </div>
+          
+          <div class="mood-card" data-mood="relaxing">
+            <div class="mood-icon">😌</div>
+            <h3>Relaxing</h3>
+            <p>Calm and soothing vibes</p>
+          </div>
+          
+          <div class="mood-card" data-mood="focus">
+            <div class="mood-icon">🎯</div>
+            <h3>Focus Mode</h3>
+            <p>Enhanced concentration</p>
+          </div>
+        </div>
+
+        <div class="ai-recommendation" id="aiRecommendation" style="display: none;">
+          <div class="ai-badge">🤖 AI Recommendation</div>
+          <h3>Based on your mood, we suggest:</h3>
+          <div class="recommendation-content" id="recommendationContent"></div>
+        </div>
+      </div>
+
+      <!-- Step 4: Customer Info -->
+      <div class="step-content" id="step4">
+        <h2 class="step-title">Your Information</h2>
+        <p class="step-subtitle">Almost there! Just a few details</p>
+        
+        <div class="form-container">
+          <div class="form-group">
+            <label for="customerName">Name *</label>
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone">Phone (Optional)</label>
+            <input type="tel" id="customerPhone" placeholder="(555) 123-4567">
+          </div>
+
+          <div class="form-group">
+            <label for="pickupTime">Pickup Time *</label>
+            <select id="pickupTime" required>
+              <option value="">Select time</option>
+              <option value="asap">ASAP (15 min)</option>
+              <option value="30min">30 minutes</option>
+              <option value="1hour">1 hour</option>
+              <option value="2hours">2 hours</option>
+              <option value="custom">Custom time</option>
+            </select>
+            <span class="error-message" id="timeError"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Review -->
+      <div class="step-content" id="step5">
+        <h2 class="step-title">Review Your Order</h2>
+        <p class="step-subtitle">Everything looks good?</p>
+        
+        <div class="review-card">
+          <div class="review-section">
+            <h3>Drink Details</h3>
+            <div class="review-item">
+              <span>Category:</span>
+              <span id="reviewCategory"></span>
+            </div>
+            <div class="review-item">
+              <span>Size:</span>
+              <span id="reviewSize"></span>
+            </div>
+            <div class="review-item">
+              <span>Milk:</span>
+              <span id="reviewMilk"></span>
+            </div>
+            <div class="review-item">
+              <span>Sweetness:</span>
+              <span id="reviewSweetness"></span>
+            </div>
+            <div class="review-item">
+              <span>Ice:</span>
+              <span id="reviewIce"></span>
+            </div>
+            <div class="review-item">
+              <span>Espresso Shots:</span>
+              <span id="reviewShots"></span>
+            </div>
+            <div class="review-item">
+              <span>Add-ons:</span>
+              <span id="reviewAddons"></span>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>AI Personalization</h3>
+            <div class="review-item">
+              <span>Mood:</span>
+              <span id="reviewMood"></span>
+            </div>
+          </div>
+
+          <div class="review-section">
+            <h3>Customer Info</h3>
+            <div class="review-item">
+              <span>Name:</span>
+              <span id="reviewName"></span>
+            </div>
+            <div class="review-item">
+              <span>Phone:</span>
+              <span id="reviewPhone"></span>
+            </div>
+            <div class="review-item">
+              <span>Pickup:</span>
+              <span id="reviewPickup"></span>
+            </div>
+          </div>
+
+          <div class="review-total">
+            <span>Estimated Total:</span>
+            <span class="total-price" id="totalPrice">$5.99</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="step-content" id="stepSuccess" style="display: none;">
+        <div class="success-animation">
+          <div class="success-icon">✓</div>
+        </div>
+        <h2 class="success-title">Order Confirmed!</h2>
+        <p class="success-message">Your AI-crafted coffee is being prepared</p>
+        <div class="order-number">Order #<span id="orderNumber"></span></div>
+        <button class="btn btn-primary" onclick="closeOrderSystem()">Close</button>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" id="prevBtn" style="display: none;">← Previous</button>
+        <button class="btn btn-primary" id="nextBtn">Next →</button>
+        <button class="btn btn-success" id="confirmBtn" style="display: none;">Confirm Order ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">☁️</span>
+            <span class="logo-text">CloudBrew</span>
+          </div>
+          <p>AI-powered coffee perfection</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <a href="#menu">Coffee</a>
+            <a href="#menu">Specialty Drinks</a>
+            <a href="#menu">Pastries</a>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#features">Technology</a>
+            <a href="#contact">Contact</a>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 CloudBrew AI Coffee Shop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="order.js"></script>
+</body>
+</html>
