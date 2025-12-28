@@ -3,6 +3,8 @@
 CloudBrew is a fully serverless web application built on AWS that allows users to place and retrieve coffee orders through a static frontend integrated with cloud-native backend services.  
 The project demonstrates real-world frontend–backend interaction, serverless architecture design, and AWS service integration without managing any servers.
 
+🌐 **Live Demo:** [http://cloudbrew-frontend.s3-website.ap-south-1.amazonaws.com](http://cloudbrew-frontend.s3-website.ap-south-1.amazonaws.com)
+
 ![CloudBrew](https://img.shields.io/badge/CloudBrew-AI%20Coffee-8B4513?style=for-the-badge)
 ![AWS](https://img.shields.io/badge/AWS-Serverless-FF9900?style=for-the-badge&logo=amazon-aws)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
