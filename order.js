@@ -371,7 +371,7 @@ async function confirmOrder() {
   try {
     // Call API Gateway
     const response = await fetch(
-      '/order',
+      '/api/order',
       {
         method: 'POST',
         headers: {
