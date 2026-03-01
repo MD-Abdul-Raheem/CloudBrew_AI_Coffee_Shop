@@ -371,7 +371,7 @@ async function confirmOrder() {
   try {
     // Call API Gateway
     const response = await fetch(
-      'https://d1y0uz93hv5wne.cloudfront.net/api/order',
+      '/order',
       {
         method: 'POST',
         headers: {
